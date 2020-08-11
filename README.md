@@ -35,7 +35,7 @@ The following areas are preconfigured, however feel free to use your preferred f
 
 - Cucumber: 
     - `src/test/resources` 
-    - `src/test/java/io/asto/app/cucumber/tCucumberTest.java`
+    - `src/test/java/io/asto/app/cucumber/CucumberTest.java`
     
 - Selenium: `src/test/java/io/asto/app/selenium/SeleniumTest.java`
 
@@ -48,7 +48,7 @@ We would like to cover the following
 
 Feature request.
 
-`As a cat person, I want to be view random facts about cats so that I can choose the most interesting fact.`
+`As a cat person, I want to view random facts about cats so that I can choose the most interesting fact.`
 
 For the above we would like to:
 
