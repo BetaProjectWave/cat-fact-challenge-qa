@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>CatFact</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.js"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+
+<style>
+    button:disabled {
+        cursor: not-allowed;
+        pointer-events: all !important;
+    }
+</style>
+
+<!-- Template for the fact form -->
+<script type="x/template" id="fact_form">
+    <form class="pb-3">
+        <div class="form-group">
+            <label>How Many Facts?</label>
+            <input type="text" class="form-control" placeholder="Enter Limit (1-100)" v-model="fact_limit">
+        </div>
+        <button v-on:click="onSubmit" class="btn btn-primary" type="button">Fetch</button>
+        <button v-on:click="onClear" :disabled="isClearDisabled" class="btn btn-secondary" type="button">Clear</button>
+    </form>
+</script>
+
+
+<!-- Template for the fact results -->
+<script type="x/template" id="fact_results">
+    <div class="pb-3">
+        <div>
+            {{message}}
+        </div>
+        <ul class="list-group">
+            <li class="list-group-item" v-for="fact in facts">
+                {{fact}}
+            </li>
+        </ul>
+    </div>
+</script>
+
+
+<div id="app" class="container">
+
+    <header class="pl3 pr3">
+        <h1>Cat Facts</h1>
+        <p>Search for cat facts!</p>
+    </header>
+
+    <fact_form></fact_form>
+    <fact_results></fact_results>
+
+</div>
+
+
+<script src="./index.js" crossorigin="anonymous"></script>
+</body>
+
+
+</html>
