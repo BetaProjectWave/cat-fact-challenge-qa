@@ -13,21 +13,21 @@ We would like you to improve the test suite for the cat fact application.
 Build and Run Tests
 
 ```
-    mvn clean verify
+mvn clean verify
 ```
 
 Start Application
 
 ```
-    mvn spring-boot:run
+mvn spring-boot:run
 ```
 
 ## Resources
 
-- Home Page: `http://localhost:8080`
-- Swagger Docs: `http://localhost:8080/swagger-ui/`
-- API Endpoint: `http://localhost:8080/facts?limit=5`
-- CatFact API: `https://catfact.ninja`
+- Home Page: http://localhost:8080
+- Swagger Docs: http://localhost:8080/swagger-ui/
+- API Endpoint: http://localhost:8080/facts?limit=5
+- CatFact API: https://catfact.ninja
 
 ### Preconfigured
 
