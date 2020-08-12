@@ -1,4 +1,4 @@
-Feature: As a cat person, I want to be view random facts about cats.
+Feature: As a cat person, I want to view random facts about cats so that I can choose the most interesting fact.
 
   Scenario: Example Scenario
     Given example with string
